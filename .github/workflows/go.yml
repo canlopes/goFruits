@@ -34,4 +34,4 @@ jobs:
       run: go build -v .
 
     - name: Test
-      run: cd tests
+      run: cd tests &  godog features/api.feature
