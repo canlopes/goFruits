@@ -35,8 +35,10 @@ jobs:
       
     - name: Build
       run: go build -v .
-
-    - run: go run server.go &
-    - run: cd tests &
-    - run: ls 
-    - run: godog tests/features/api.feature
+    
+    - name: Start server
+      run: go run server.go
+      
+    - name: Run tests  
+      run: godog features/api.feature
+      working-directory: ./tests  
