@@ -36,6 +36,9 @@ jobs:
     - name: Build
       run: go build -v .
 
+    - name: run server
+      run: go run server.go
+      
     - name: Test
       run: |
         cd tests
