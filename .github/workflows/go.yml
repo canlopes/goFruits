@@ -29,7 +29,9 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
-
+    - name: get godog
+      run: go get github.com/DATA-DOG/godog/cmd/godog
+      
     - name: Build
       run: go build -v .
 
